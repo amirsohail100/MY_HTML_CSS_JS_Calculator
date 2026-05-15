@@ -1,5 +1,3 @@
-# MY_HTML_CSS_JS_Calculator
-
 # 🧮 Interactive Web Calculator
 
 A sleek, responsive, and fully functional web calculator built from scratch using **HTML5, CSS3, and JavaScript**. This project features a modern user interface with smooth animations and precise arithmetic operations.
