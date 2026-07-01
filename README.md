@@ -27,3 +27,12 @@ A sleek, responsive, and fully functional web calculator built from scratch usin
 ![Calculator Preview](calculate-preview.png)
 
 ---
+
+## 🚀 How to Run Locally
+
+### 1. Clone and Enter the Repository
+
+```bash
+git clone [https://github.com/amirsohail100/MY_HTML_CSS_JS_Calculator.git](https://github.com/amirsohail100/MY_HTML_CSS_JS_Calculator.git)
+cd MY_HTML_CSS_JS_Calculator
+```
