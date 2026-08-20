@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Interactive Web Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>Calculator APP</h1>
+    <!-- Ambient Background Lighting -->
+    <div class="ambient-blob blob-1"></div>
+    <div class="ambient-blob blob-2"></div>
+
+    <!-- Theme Toggle Control -->
+    <div class="theme-toggle-wrapper">
+        <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </div>
+
+    <h1>Calculator App</h1>
+
     <div id="main">
         <div id="Calculator-bady">
             <div class="output-box">0</div>
@@ -45,6 +60,21 @@
             </div>
         </div>
     </div>
+
+    <!-- Non-intrusive Inline Theme Controller -->
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        const themeIcon = themeBtn.querySelector('i');
+
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            if (document.body.classList.contains('light-mode')) {
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
