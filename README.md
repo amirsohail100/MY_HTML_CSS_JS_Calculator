@@ -1,42 +1,54 @@
-# 🧮 Interactive Glassmorphism Web Calculator[cite: 8]
+# 🧮 Interactive Glassmorphism Web Calculator
 
-A high-performance, modern web calculator featuring a high-contrast **Glassmorphism Panel**, continuous **Typewriter Header Title Animation**, dynamic theme toggle, and custom ES6 JavaScript parsing logic[cite: 8, 9].
+A high-performance, modern web calculator built with dynamic **Glassmorphism UI**, **Floating Mathematical Background Animations**, **Typewriter Title Header**, complete **Keyboard Navigation**, and a clean, refactored ES6 JavaScript engine.
 
 ---
 
 ## 🤵 Repository Host Details
 
-- **Author Name:** amir[cite: 8]
-- **GitHub Profile:** [amirsohail100](https://github.com/amirsohail100)[cite: 8]
+- **Author Name:** amir
+- **GitHub Profile:** [amirsohail100](https://github.com/amirsohail100)
 - **Project Status:** Production Ready 🟢
 
 ---
 
-## 🚀 Key Features & UI Enhancements
+## 🚀 Key Features & Technical Highlights
 
-- **High-Visibility Math Background Animation:** High-contrast drifting math symbols (`+`, `−`, `×`, `÷`, `%`, `√`, `π`, `=`) floating dynamically across dark and light modes.
-- **Dynamic Typewriter Title Effect:** Continuous character typing, pause delay, and backspacing cycle on the header title (`Calculator App`).
-- **High-Contrast Glassmorphism Design:** Prominent neon-accented borders and multi-layered shadows ensuring strong visual distinction from the background.
-- **Dynamic Light/Dark Themes:** One-click instant theme toggle with active glow updates.
-- **Core Math Engine:** Custom JavaScript string parsing handling arithmetic evaluation cleanly[cite: 9].
+- **High-Contrast Glass Panel:** Vibrant neon borders, high-visibility glows, and multi-layered drop shadows optimized for both Dark and Light modes.
+- **High-Visibility Floating Background:** Real-time CSS keyframe animations drifting mathematical symbols (`+`, `−`, `×`, `÷`, `%`, `√`, `π`, `=`) across the screen with boosted opacity.
+- **Dynamic Typewriter Header:** Animated typing, holding, and backspacing cycle on the main title (`Calculator App`).
+- **Refactored JS Engine:** Standardized descriptive variable/function names, eliminated nested event listener memory leaks, and added robust precision handling (`NaN` & overflow protection).
+- **Full Keyboard Integration:** Complete desktop support for numeric inputs (`0-9`), operators (`+`, `-`, `*`, `/`), evaluation (`Enter`), backspace deletion (`Backspace`), and clearing (`Escape`).
 
 ---
 
 ## 📂 Modular Architecture
 
-| File Name           | Responsibility                                                                                 |
-| :------------------ | :--------------------------------------------------------------------------------------------- |
-| 🌐 **`index.html`** | Semantic structure, typewriter controller script, and floating background wrapper[cite: 7, 9]. |
-| 🎨 **`style.css`**  | High-visibility math symbol keyframes, theme variables, glassmorphism styles[cite: 8, 10].     |
-| 🧠 **`script.js`**  | Core arithmetic calculation logic and output display state handling[cite: 9].                  |
+| File Name           | Responsibility                                                                           |
+| :------------------ | :--------------------------------------------------------------------------------------- |
+| 🌐 **`index.html`** | Semantic UI structure, typewriter header controller, and floating background wrapper.    |
+| 🎨 **`style.css`**  | High-contrast glassmorphism styles, glowing theme palettes, and CSS keyframe animations. |
+| 🧠 **`script.js`**  | Cleaned JS calculation engine, edge-case validator, and keyboard input handlers.         |
+
+---
+
+## ⌨️ Keyboard Shortcuts Support
+
+| Key                | Action                   |
+| :----------------- | :----------------------- |
+| `0` - `9` / `.`    | Input Numbers & Decimals |
+| `+`, `-`, `*`, `/` | Arithmetic Operators     |
+| `Enter` / `=`      | Calculate Result         |
+| `Backspace`        | Delete Last Character    |
+| `Escape`           | Clear All (`CE`)         |
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **HTML5:** Layout and DOM Architecture[cite: 8]
-- **CSS3:** Custom Variables, Keyframes, Backdrop Blur, Responsive Layouts[cite: 8]
-- **JavaScript (ES6):** Custom Expression Evaluator & Typewriter Engine[cite: 8, 9]
+- **HTML5:** Semantic Structure & Dynamic Backdrop Elements
+- **CSS3:** Custom Theme Variables, Keyframe Animations, Glassmorphism Backdrop Blur
+- **JavaScript (ES6):** Modular Event Handling, Expression Evaluation, Keyboard Mapping Engine
 
 ---
 
