@@ -11,69 +11,75 @@
     --bg-color: #080c14;
     --title-color: #f8fafc;
     
-    /* High contrast dark mode calculator panel */
-    --card-bg: rgba(15, 23, 42, 0.85);
-    --card-border: rgba(56, 189, 248, 0.45);
-    --card-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(56, 189, 248, 0.2);
+    /* Dark Mode Glass Panel */
+    --card-bg: rgba(15, 23, 42, 0.88);
+    --card-border: rgba(56, 189, 248, 0.5);
+    --card-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(56, 189, 248, 0.25);
 
     --display-bg: rgba(2, 6, 23, 0.95);
-    --display-border: rgba(56, 189, 248, 0.5);
+    --display-border: rgba(56, 189, 248, 0.55);
     --display-text: #38bdf8;
     --display-glow: rgba(56, 189, 248, 0.45);
 
-    /* Button Variations */
-    --btn-num-bg: rgba(255, 255, 255, 0.07);
-    --btn-num-border: rgba(255, 255, 255, 0.15);
+    /* Button Styling Variables */
+    --btn-num-bg: rgba(255, 255, 255, 0.08);
+    --btn-num-border: rgba(255, 255, 255, 0.18);
     --btn-num-text: #f1f5f9;
-    --btn-num-hover: rgba(255, 255, 255, 0.18);
+    --btn-num-hover: rgba(255, 255, 255, 0.22);
 
-    --btn-op-bg: rgba(16, 185, 129, 0.22);
-    --btn-op-border: rgba(16, 185, 129, 0.45);
+    --btn-op-bg: rgba(16, 185, 129, 0.25);
+    --btn-op-border: rgba(16, 185, 129, 0.5);
     --btn-op-text: #34d399;
-    --btn-op-hover: rgba(16, 185, 129, 0.4);
+    --btn-op-hover: rgba(16, 185, 129, 0.45);
 
-    --btn-special-bg: rgba(239, 68, 68, 0.22);
-    --btn-special-border: rgba(239, 68, 68, 0.45);
+    --btn-special-bg: rgba(239, 68, 68, 0.25);
+    --btn-special-border: rgba(239, 68, 68, 0.5);
     --btn-special-text: #f87171;
-    --btn-special-hover: rgba(239, 68, 68, 0.4);
+    --btn-special-hover: rgba(239, 68, 68, 0.45);
 
-    --blob-1: rgba(56, 189, 248, 0.2);
-    --blob-2: rgba(16, 185, 129, 0.18);
-    --math-symbol-color: rgba(255, 255, 255, 0.15);
+    --blob-1: rgba(56, 189, 248, 0.22);
+    --blob-2: rgba(16, 185, 129, 0.2);
+
+    /* Dark Mode High-Visibility Math Background */
+    --math-symbol-color: rgba(56, 189, 248, 0.45);
+    --math-symbol-glow: rgba(56, 189, 248, 0.25);
 }
 
 body.light-mode {
     --bg-color: #e0f2fe;
     --title-color: #0f172a;
     
-    /* High contrast light mode calculator panel */
-    --card-bg: rgba(255, 255, 255, 0.82);
-    --card-border: rgba(2, 132, 199, 0.5);
-    --card-shadow: 0 20px 50px rgba(14, 165, 233, 0.25), 0 0 25px rgba(255, 255, 255, 0.8);
+    /* Light Mode Glass Panel */
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-border: rgba(2, 132, 199, 0.55);
+    --card-shadow: 0 20px 50px rgba(14, 165, 233, 0.28), 0 0 25px rgba(255, 255, 255, 0.9);
 
     --display-bg: #ffffff;
-    --display-border: rgba(2, 132, 199, 0.4);
+    --display-border: rgba(2, 132, 199, 0.45);
     --display-text: #0284c7;
-    --display-glow: rgba(2, 132, 199, 0.25);
+    --display-glow: rgba(2, 132, 199, 0.3);
 
     --btn-num-bg: rgba(255, 255, 255, 0.95);
-    --btn-num-border: rgba(148, 163, 184, 0.4);
+    --btn-num-border: rgba(148, 163, 184, 0.45);
     --btn-num-text: #0f172a;
     --btn-num-hover: #f1f5f9;
 
-    --btn-op-bg: rgba(16, 185, 129, 0.18);
-    --btn-op-border: rgba(16, 185, 129, 0.5);
+    --btn-op-bg: rgba(16, 185, 129, 0.2);
+    --btn-op-border: rgba(16, 185, 129, 0.55);
     --btn-op-text: #059669;
-    --btn-op-hover: rgba(16, 185, 129, 0.32);
+    --btn-op-hover: rgba(16, 185, 129, 0.35);
 
-    --btn-special-bg: rgba(239, 68, 68, 0.18);
-    --btn-special-border: rgba(239, 68, 68, 0.5);
+    --btn-special-bg: rgba(239, 68, 68, 0.2);
+    --btn-special-border: rgba(239, 68, 68, 0.55);
     --btn-special-text: #dc2626;
-    --btn-special-hover: rgba(239, 68, 68, 0.32);
+    --btn-special-hover: rgba(239, 68, 68, 0.35);
 
-    --blob-1: rgba(186, 230, 253, 0.7);
-    --blob-2: rgba(167, 243, 208, 0.7);
-    --math-symbol-color: rgba(14, 165, 233, 0.22);
+    --blob-1: rgba(186, 230, 253, 0.75);
+    --blob-2: rgba(167, 243, 208, 0.75);
+
+    /* Light Mode High-Visibility Math Background */
+    --math-symbol-color: rgba(2, 132, 199, 0.5);
+    --math-symbol-glow: rgba(2, 132, 199, 0.2);
 }
 
 body {
@@ -120,7 +126,7 @@ body {
     100% { transform: scale(1.25) translate(30px, -20px); }
 }
 
-/* Dynamic Floating Math Symbols Animation */
+/* High Contrast Floating Math Symbols Container */
 .math-bg-container {
     position: fixed;
     top: 0;
@@ -136,12 +142,13 @@ body {
     position: absolute;
     bottom: -10%;
     left: var(--x);
-    font-size: calc(1.5rem + (var(--i) * 0.15rem));
-    font-weight: 700;
+    font-size: calc(1.8rem + (var(--i) * 0.18rem));
+    font-weight: 800;
     color: var(--math-symbol-color);
+    text-shadow: 0 0 12px var(--math-symbol-glow);
     user-select: none;
-    animation: floatMathAnimation 12s linear infinite;
-    animation-delay: calc(var(--i) * -1.8s);
+    animation: floatMathAnimation 11s linear infinite;
+    animation-delay: calc(var(--i) * -1.6s);
 }
 
 @keyframes floatMathAnimation {
@@ -150,10 +157,10 @@ body {
         opacity: 0;
     }
     15% {
-        opacity: 0.8;
+        opacity: 0.95;
     }
     85% {
-        opacity: 0.8;
+        opacity: 0.95;
     }
     100% {
         transform: translateY(-115vh) rotate(360deg);
@@ -161,7 +168,7 @@ body {
     }
 }
 
-/* Theme Switcher Button */
+/* Theme Switcher Toggle */
 .theme-toggle-wrapper {
     position: absolute;
     top: 1.5rem;
@@ -190,6 +197,7 @@ body {
     transform: scale(1.1) rotate(15deg);
 }
 
+/* Typewriter Title Animation Header */
 h1 {
     margin-bottom: 2rem;
     text-align: center;
@@ -198,7 +206,23 @@ h1 {
     color: var(--title-color);
     letter-spacing: 1px;
     z-index: 1;
+    min-height: 3.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.type-cursor {
+    color: var(--display-text);
+    font-weight: 400;
+    margin-left: 2px;
+    animation: blinkCursor 0.7s infinite alternate;
+}
+
+@keyframes blinkCursor {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 #main {
@@ -209,7 +233,7 @@ h1 {
     z-index: 1;
 }
 
-/* High Contrast Glassmorphism Container */
+/* High Contrast Glass Container */
 #Calculator-bady {
     display: flex;
     flex-direction: column;
@@ -225,7 +249,7 @@ h1 {
     max-width: 380px;
 }
 
-/* Output Display Screen */
+/* Digital Output Box Screen */
 .output-box {
     width: 100%;
     height: 4.8rem;
@@ -254,7 +278,7 @@ h1 {
     border-radius: 4px;
 }
 
-/* Button Part Grid */
+/* Button Layout Grid */
 .but-part {
     display: flex;
     flex-direction: column;
@@ -344,5 +368,8 @@ button:disabled {
     .output-box {
         font-size: 1.8rem;
         height: 4.2rem;
+    }
+    h1 {
+        font-size: 2rem;
     }
 }
