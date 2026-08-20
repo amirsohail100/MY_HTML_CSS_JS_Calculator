@@ -12,6 +12,12 @@ A high-performance, modern web calculator built with dynamic **Glassmorphism UI*
 
 ---
 
+## 📸 Live Preview of the Interface
+
+![Calculator Preview](./calculate-preview.png)
+
+---
+
 ## 🚀 Key Features & Technical Highlights
 
 - **High-Contrast Glass Panel:** Vibrant neon borders, high-visibility glows, and multi-layered drop shadows optimized for both Dark and Light modes.
