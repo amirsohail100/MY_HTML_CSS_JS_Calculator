@@ -14,7 +14,7 @@
     <div class="ambient-blob blob-1"></div>
     <div class="ambient-blob blob-2"></div>
 
-    <!-- Dynamic Floating Mathematical Symbols Background -->
+    <!-- High-Visibility Dynamic Floating Math Background -->
     <div class="math-bg-container" aria-hidden="true">
         <span style="--i:1; --x:5%;">+</span>
         <span style="--i:2; --x:15%;">−</span>
@@ -40,7 +40,8 @@
         </button>
     </div>
 
-    <h1>Calculator App</h1>
+    <!-- Animated Typewriter Header Title -->
+    <h1 id="typewriter-title"><span class="type-text"></span><span class="type-cursor">|</span></h1>
 
     <div id="main">
         <div id="Calculator-bady">
@@ -80,8 +81,9 @@
         </div>
     </div>
 
-    <!-- Theme Switcher Script -->
+    <!-- Interactive UI Controllers (Theme Switcher & Typewriter) -->
     <script>
+        // Theme Switcher Controller
         const themeBtn = document.getElementById('theme-toggle');
         const themeIcon = themeBtn.querySelector('i');
 
@@ -93,6 +95,33 @@
                 themeIcon.classList.replace('fa-sun', 'fa-moon');
             }
         });
+
+        // Typewriter & Erasing Title Effect
+        const titleText = "Calculator App";
+        const typeTextContainer = document.querySelector('.type-text');
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function runTypewriter() {
+            const currentString = titleText.substring(0, charIndex);
+            typeTextContainer.textContent = currentString;
+
+            let speed = isDeleting ? 70 : 130;
+
+            if (!isDeleting && charIndex === titleText.length) {
+                speed = 2200; // Hold full title when complete
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                speed = 600; // Delay before re-typing
+            } else {
+                charIndex += isDeleting ? -1 : 1;
+            }
+
+            setTimeout(runTypewriter, speed);
+        }
+
+        document.addEventListener('DOMContentLoaded', runTypewriter);
     </script>
     <script src="script.js"></script>
 </body>
