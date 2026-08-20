@@ -1,36 +1,46 @@
-# 🧮 Interactive Web Calculator
+# 🧮 Interactive Glassmorphism Web Calculator[cite: 8]
 
-A sleek, responsive, and fully functional web calculator built from scratch using **HTML5, CSS3, and JavaScript**. This project features a modern user interface with smooth animations and precise arithmetic operations.
+A high-performance, modern web calculator engineered with a **Glassmorphism UI**, dynamic dark/light themes, ambient background glowing animations, and precise custom ES6 JavaScript arithmetic evaluation logic[cite: 8].
 
 ---
 
-## 🚀 Features
+## 🤵 Repository Host Details
 
-- **Core Arithmetic:** Supports addition, subtraction, multiplication, and division.
-- **Modern UI/UX:** Clean, glassmorphism-inspired design with smooth hover effects and button transitions.
-- **Responsive Design:** Fully optimized for all screen sizes, from mobile phones to desktop monitors.
-- **Key Functions:** Includes standard clearing functions (`C` or `AC`) and backspace capabilities for easy error correction.
-- **Decimal Precision:** Handles floating-point numbers accurately.
+- **Author Name:** amir[cite: 8]
+- **GitHub Profile:** [amirsohail100](https://github.com/amirsohail100)[cite: 8]
+- **Project Status:** Production Ready 🟢
+
+---
+
+## 🚀 Key Features & UI Enhancements
+
+- **Frosted Glassmorphism Styling:** Translucent UI panel with real-time `backdrop-filter` background blurring[cite: 8].
+- **Dynamic Theme Switcher:** Smooth toggling between Dark and Light visual themes with adaptive emerald and cyan accent lighting.
+- **Micro-Animations & Feedback:** Tactile button scale responses on press, hover elevations, and pulsating ambient background lighting blobs.
+- **Digital LCD Monospace Display:** Enhanced digital display container using `'JetBrains Mono'` font with subtle text glowing effects.
+- **Robust Custom Calculator Logic:** Full arithmetic operation support handling addition, subtraction, multiplication, division, floats, backspace (`DEL`), and reset (`CE`)[cite: 8, 9].
+
+---
+
+## 📂 Modular Architecture
+
+| File Name           | Responsibility                                                                                     |
+| :------------------ | :------------------------------------------------------------------------------------------------- |
+| 🌐 **`index.html`** | Structure layer with exact DOM selector anchors for the backend engine[cite: 7, 9].                |
+| 🎨 **`style.css`**  | Modern CSS Variables, Glassmorphism filters, theme palettes, and keyframe animations[cite: 8, 10]. |
+| 🧠 **`script.js`**  | Core custom evaluation engine handling calculations and input formatting[cite: 9].                 |
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **HTML5:** Structured the calculator layout and button grid.
-- **CSS3:** Styled the interface using Flexbox/Grid, custom color palettes, and responsive media queries.
-- **JavaScript (ES6):** Implemented the core mathematical logic and dynamic UI updates.
-
----
-
-## 📸 Demo
-
-![Calculator Preview](calculate-preview.png)
+- **HTML5:** Semantic Structural Layout[cite: 8]
+- **CSS3:** Custom Variables, Flexbox Grid, Glassmorphism, Responsive Media Queries[cite: 8]
+- **JavaScript (ES6):** Custom Parsing & Arithmetic Logic Engine[cite: 8, 9]
 
 ---
 
 ## 🚀 How to Run Locally
-
-### 1. Clone and Enter the Repository
 
 ```bash
 git clone [https://github.com/amirsohail100/MY_HTML_CSS_JS_Calculator.git](https://github.com/amirsohail100/MY_HTML_CSS_JS_Calculator.git)
