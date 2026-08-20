@@ -1,88 +1,292 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: Arial;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
-body{
-    background-color: rgb(87, 123, 167);
+/* Color Variables for Dark/Light Themes */
+:root {
+    --bg-color: #0b0f19;
+    --title-color: #f8fafc;
+    --card-bg: rgba(20, 27, 45, 0.65);
+    --card-border: rgba(255, 255, 255, 0.12);
+    --display-bg: rgba(10, 15, 29, 0.85);
+    --display-text: #38bdf8;
+    --display-glow: rgba(56, 189, 248, 0.35);
+
+    /* Button Variations */
+    --btn-num-bg: rgba(255, 255, 255, 0.06);
+    --btn-num-text: #f1f5f9;
+    --btn-num-hover: rgba(255, 255, 255, 0.15);
+
+    --btn-op-bg: rgba(16, 185, 129, 0.18);
+    --btn-op-text: #34d399;
+    --btn-op-hover: rgba(16, 185, 129, 0.35);
+
+    --btn-special-bg: rgba(239, 68, 68, 0.18);
+    --btn-special-text: #f87171;
+    --btn-special-hover: rgba(239, 68, 68, 0.35);
+
+    --blob-1: rgba(56, 189, 248, 0.25);
+    --blob-2: rgba(16, 185, 129, 0.22);
+    --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
-h1{
-    margin-top: 20px;
-    margin-bottom: 60px;
+body.light-mode {
+    --bg-color: #e0f2fe;
+    --title-color: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.65);
+    --card-border: rgba(56, 189, 248, 0.3);
+    --display-bg: #ffffff;
+    --display-text: #0284c7;
+    --display-glow: rgba(2, 132, 199, 0.2);
+
+    --btn-num-bg: rgba(255, 255, 255, 0.9);
+    --btn-num-text: #1e293b;
+    --btn-num-hover: #f1f5f9;
+
+    --btn-op-bg: rgba(16, 185, 129, 0.15);
+    --btn-op-text: #059669;
+    --btn-op-hover: rgba(16, 185, 129, 0.3);
+
+    --btn-special-bg: rgba(239, 68, 68, 0.15);
+    --btn-special-text: #dc2626;
+    --btn-special-hover: rgba(239, 68, 68, 0.28);
+
+    --blob-1: rgba(186, 230, 253, 0.8);
+    --blob-2: rgba(167, 243, 208, 0.8);
+    --shadow-color: rgba(14, 165, 233, 0.15);
+}
+
+body {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+    padding: 1.5rem;
+}
+
+/* Background Animated Blobs */
+.ambient-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+    animation: pulseBlob 8s ease-in-out infinite alternate;
+}
+
+.blob-1 {
+    width: 320px;
+    height: 320px;
+    background: var(--blob-1);
+    top: 10%;
+    left: 15%;
+}
+
+.blob-2 {
+    width: 300px;
+    height: 300px;
+    background: var(--blob-2);
+    bottom: 10%;
+    right: 15%;
+    animation-delay: -4s;
+}
+
+@keyframes pulseBlob {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.2) translate(30px, -20px); }
+}
+
+/* Theme Toggle Button */
+.theme-toggle-wrapper {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 10;
+}
+
+#theme-toggle {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--title-color);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+
+h1 {
+    margin-bottom: 2rem;
     text-align: center;
-    font-size: 50px;
-    color: rgb(30, 55, 85);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--title-color);
+    letter-spacing: 1px;
+    z-index: 1;
+    text-shadow: 0 4px 12px var(--shadow-color);
 }
 
-#main{
+#main {
     display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
 }
 
-#Calculator-bady{
+/* Calculator Glassmorphism Container */
+#Calculator-bady {
     display: flex;
-    justify-content: center;
-    text-align: center;
-    height: 80vmin;
-    width: 60vmin;
-    background-color: rgb(32, 23, 59);
-    border-radius: 4vmin;
-    border: 10px solid black;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.8rem;
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 2rem;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 25px 50px -12px var(--shadow-color);
+    width: 100%;
+    max-width: 380px;
 }
 
-.output-box{
-    padding-right: 1vmin;
-    padding-top: 1.5vmin;
-    text-align:right ;
-    /* justify-items: center; */
-    font-size: 7vmin;
-    margin-top: 27px;
-    background-color: white;
-    height: 10.5vmin;
-    width: 51vmin;
-    border-radius: 4vmin;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+/* Output Display Box */
+.output-box {
+    width: 100%;
+    height: 4.8rem;
+    background: var(--display-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 1.25rem;
+    color: var(--display-text);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1.2rem;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+    word-break: break-all;
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 15px var(--display-glow);
 }
 
-.but{
-    margin-top: 8px;
-    height: 10vmin;
-    width: 12vmin;
-    border-radius: 3vmin;
-    border: none;
-    font-size: 3.5vmin;
-    background-color: #ffffc3e5;
+/* Custom Scrollbar for Display */
+.output-box::-webkit-scrollbar {
+    height: 4px;
+}
+.output-box::-webkit-scrollbar-thumb {
+    background: var(--display-text);
+    border-radius: 4px;
+}
+
+/* Button Layout Grid */
+.but-part {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.but-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+
+/* Universal Button Styling */
+button {
+    flex: 1;
+    height: 3.8rem;
+    border-radius: 1rem;
+    border: 1px solid var(--card-border);
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: transform 0.12s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: scale(0.92);
+}
+
+/* Number Buttons */
+.but {
+    background-color: var(--btn-num-bg);
+    color: var(--btn-num-text);
+}
+
+.but:hover {
+    background-color: var(--btn-num-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Operator Buttons (+, -, x, /, %) */
+.but-sin {
+    background-color: var(--btn-op-bg);
+    color: var(--btn-op-text);
+}
+
+.but-sin:hover {
+    background-color: var(--btn-op-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px var(--btn-op-bg);
+}
+
+/* Special Action Buttons (CE, DEL, =) */
+.but-s {
+    background-color: var(--btn-special-bg);
+    color: var(--btn-special-text);
     font-weight: 700;
 }
 
-.but-s{
-    margin-top: 8px;
-    height: 10vmin;
-    width: 12vmin;
-    border-radius: 3vmin;
-    border: none;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
-    font-size: 3.5vmin;
-    font-weight: 800;
-    background-color: #86864fe5;
-}
-.but-sin{
-    margin-top: 8px;
-    font-weight: 700;
-    height: 10vmin;
-    width: 12vmin;
-    border-radius: 3vmin;
-    border: none;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
-    font-size: 3.5vmin;
-    background-color: #bfbf83e5;
+.but-s:hover {
+    background-color: var(--btn-special-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px var(--btn-special-bg);
 }
 
-button:hover{
-    border-radius: 4vmin;
-    background-color: #bfbf83b3;
+/* Disabled Button State */
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Responsive Scaling */
+@media (max-width: 420px) {
+    #Calculator-bady {
+        padding: 1.2rem;
+    }
+    button {
+        height: 3.4rem;
+        font-size: 1.1rem;
+    }
+    .output-box {
+        font-size: 1.8rem;
+        height: 4.2rem;
+    }
 }
