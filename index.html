@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Web Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts & Icons -->
+    <!-- Google Fonts & FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -13,6 +13,25 @@
     <!-- Ambient Background Lighting -->
     <div class="ambient-blob blob-1"></div>
     <div class="ambient-blob blob-2"></div>
+
+    <!-- Dynamic Floating Mathematical Symbols Background -->
+    <div class="math-bg-container" aria-hidden="true">
+        <span style="--i:1; --x:5%;">+</span>
+        <span style="--i:2; --x:15%;">−</span>
+        <span style="--i:3; --x:25%;">×</span>
+        <span style="--i:4; --x:35%;">÷</span>
+        <span style="--i:5; --x:45%;">%</span>
+        <span style="--i:6; --x:55%;">=</span>
+        <span style="--i:7; --x:65%;">√</span>
+        <span style="--i:8; --x:75%;">π</span>
+        <span style="--i:9; --x:85%;">(</span>
+        <span style="--i:10; --x:92%;">)</span>
+        <span style="--i:11; --x:10%;">÷</span>
+        <span style="--i:12; --x:30%;">+</span>
+        <span style="--i:13; --x:50%;">×</span>
+        <span style="--i:14; --x:70%;">−</span>
+        <span style="--i:15; --x:88%;">%</span>
+    </div>
 
     <!-- Theme Toggle Control -->
     <div class="theme-toggle-wrapper">
@@ -61,7 +80,7 @@
         </div>
     </div>
 
-    <!-- Non-intrusive Inline Theme Controller -->
+    <!-- Theme Switcher Script -->
     <script>
         const themeBtn = document.getElementById('theme-toggle');
         const themeIcon = themeBtn.querySelector('i');
