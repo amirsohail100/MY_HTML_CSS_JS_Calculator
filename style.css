@@ -8,56 +8,72 @@
 
 /* Color Variables for Dark/Light Themes */
 :root {
-    --bg-color: #0b0f19;
+    --bg-color: #080c14;
     --title-color: #f8fafc;
-    --card-bg: rgba(20, 27, 45, 0.65);
-    --card-border: rgba(255, 255, 255, 0.12);
-    --display-bg: rgba(10, 15, 29, 0.85);
+    
+    /* High contrast dark mode calculator panel */
+    --card-bg: rgba(15, 23, 42, 0.85);
+    --card-border: rgba(56, 189, 248, 0.45);
+    --card-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(56, 189, 248, 0.2);
+
+    --display-bg: rgba(2, 6, 23, 0.95);
+    --display-border: rgba(56, 189, 248, 0.5);
     --display-text: #38bdf8;
-    --display-glow: rgba(56, 189, 248, 0.35);
+    --display-glow: rgba(56, 189, 248, 0.45);
 
     /* Button Variations */
-    --btn-num-bg: rgba(255, 255, 255, 0.06);
+    --btn-num-bg: rgba(255, 255, 255, 0.07);
+    --btn-num-border: rgba(255, 255, 255, 0.15);
     --btn-num-text: #f1f5f9;
-    --btn-num-hover: rgba(255, 255, 255, 0.15);
+    --btn-num-hover: rgba(255, 255, 255, 0.18);
 
-    --btn-op-bg: rgba(16, 185, 129, 0.18);
+    --btn-op-bg: rgba(16, 185, 129, 0.22);
+    --btn-op-border: rgba(16, 185, 129, 0.45);
     --btn-op-text: #34d399;
-    --btn-op-hover: rgba(16, 185, 129, 0.35);
+    --btn-op-hover: rgba(16, 185, 129, 0.4);
 
-    --btn-special-bg: rgba(239, 68, 68, 0.18);
+    --btn-special-bg: rgba(239, 68, 68, 0.22);
+    --btn-special-border: rgba(239, 68, 68, 0.45);
     --btn-special-text: #f87171;
-    --btn-special-hover: rgba(239, 68, 68, 0.35);
+    --btn-special-hover: rgba(239, 68, 68, 0.4);
 
-    --blob-1: rgba(56, 189, 248, 0.25);
-    --blob-2: rgba(16, 185, 129, 0.22);
-    --shadow-color: rgba(0, 0, 0, 0.5);
+    --blob-1: rgba(56, 189, 248, 0.2);
+    --blob-2: rgba(16, 185, 129, 0.18);
+    --math-symbol-color: rgba(255, 255, 255, 0.15);
 }
 
 body.light-mode {
     --bg-color: #e0f2fe;
     --title-color: #0f172a;
-    --card-bg: rgba(255, 255, 255, 0.65);
-    --card-border: rgba(56, 189, 248, 0.3);
-    --display-bg: #ffffff;
-    --display-text: #0284c7;
-    --display-glow: rgba(2, 132, 199, 0.2);
+    
+    /* High contrast light mode calculator panel */
+    --card-bg: rgba(255, 255, 255, 0.82);
+    --card-border: rgba(2, 132, 199, 0.5);
+    --card-shadow: 0 20px 50px rgba(14, 165, 233, 0.25), 0 0 25px rgba(255, 255, 255, 0.8);
 
-    --btn-num-bg: rgba(255, 255, 255, 0.9);
-    --btn-num-text: #1e293b;
+    --display-bg: #ffffff;
+    --display-border: rgba(2, 132, 199, 0.4);
+    --display-text: #0284c7;
+    --display-glow: rgba(2, 132, 199, 0.25);
+
+    --btn-num-bg: rgba(255, 255, 255, 0.95);
+    --btn-num-border: rgba(148, 163, 184, 0.4);
+    --btn-num-text: #0f172a;
     --btn-num-hover: #f1f5f9;
 
-    --btn-op-bg: rgba(16, 185, 129, 0.15);
+    --btn-op-bg: rgba(16, 185, 129, 0.18);
+    --btn-op-border: rgba(16, 185, 129, 0.5);
     --btn-op-text: #059669;
-    --btn-op-hover: rgba(16, 185, 129, 0.3);
+    --btn-op-hover: rgba(16, 185, 129, 0.32);
 
-    --btn-special-bg: rgba(239, 68, 68, 0.15);
+    --btn-special-bg: rgba(239, 68, 68, 0.18);
+    --btn-special-border: rgba(239, 68, 68, 0.5);
     --btn-special-text: #dc2626;
-    --btn-special-hover: rgba(239, 68, 68, 0.28);
+    --btn-special-hover: rgba(239, 68, 68, 0.32);
 
-    --blob-1: rgba(186, 230, 253, 0.8);
-    --blob-2: rgba(167, 243, 208, 0.8);
-    --shadow-color: rgba(14, 165, 233, 0.15);
+    --blob-1: rgba(186, 230, 253, 0.7);
+    --blob-2: rgba(167, 243, 208, 0.7);
+    --math-symbol-color: rgba(14, 165, 233, 0.22);
 }
 
 body {
@@ -67,44 +83,85 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
     padding: 1.5rem;
 }
 
-/* Background Animated Blobs */
+/* Ambient Background Blobs */
 .ambient-blob {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
+    filter: blur(90px);
     pointer-events: none;
     z-index: 0;
     animation: pulseBlob 8s ease-in-out infinite alternate;
 }
 
 .blob-1 {
-    width: 320px;
-    height: 320px;
+    width: 380px;
+    height: 380px;
     background: var(--blob-1);
-    top: 10%;
-    left: 15%;
+    top: 5%;
+    left: 10%;
 }
 
 .blob-2 {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     background: var(--blob-2);
-    bottom: 10%;
-    right: 15%;
+    bottom: 5%;
+    right: 10%;
     animation-delay: -4s;
 }
 
 @keyframes pulseBlob {
     0% { transform: scale(1) translate(0, 0); }
-    100% { transform: scale(1.2) translate(30px, -20px); }
+    100% { transform: scale(1.25) translate(30px, -20px); }
 }
 
-/* Theme Toggle Button */
+/* Dynamic Floating Math Symbols Animation */
+.math-bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.math-bg-container span {
+    position: absolute;
+    bottom: -10%;
+    left: var(--x);
+    font-size: calc(1.5rem + (var(--i) * 0.15rem));
+    font-weight: 700;
+    color: var(--math-symbol-color);
+    user-select: none;
+    animation: floatMathAnimation 12s linear infinite;
+    animation-delay: calc(var(--i) * -1.8s);
+}
+
+@keyframes floatMathAnimation {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.8;
+    }
+    85% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Theme Switcher Button */
 .theme-toggle-wrapper {
     position: absolute;
     top: 1.5rem;
@@ -114,15 +171,15 @@ body {
 
 #theme-toggle {
     background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    border: 2px solid var(--card-border);
     color: var(--title-color);
-    width: 3rem;
-    height: 3rem;
+    width: 3.2rem;
+    height: 3.2rem;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 1.2rem;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 20px var(--shadow-color);
+    font-size: 1.25rem;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--card-shadow);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,7 +198,7 @@ h1 {
     color: var(--title-color);
     letter-spacing: 1px;
     z-index: 1;
-    text-shadow: 0 4px 12px var(--shadow-color);
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 #main {
@@ -152,28 +209,28 @@ h1 {
     z-index: 1;
 }
 
-/* Calculator Glassmorphism Container */
+/* High Contrast Glassmorphism Container */
 #Calculator-bady {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1.8rem;
     background: var(--card-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border-radius: 2rem;
-    border: 1px solid var(--card-border);
-    box-shadow: 0 25px 50px -12px var(--shadow-color);
+    border: 2px solid var(--card-border);
+    box-shadow: var(--card-shadow);
     width: 100%;
     max-width: 380px;
 }
 
-/* Output Display Box */
+/* Output Display Screen */
 .output-box {
     width: 100%;
     height: 4.8rem;
     background: var(--display-bg);
-    border: 1px solid var(--card-border);
+    border: 2px solid var(--display-border);
     border-radius: 1.25rem;
     color: var(--display-text);
     font-family: 'JetBrains Mono', monospace;
@@ -186,10 +243,9 @@ h1 {
     margin-bottom: 1.5rem;
     overflow-x: auto;
     word-break: break-all;
-    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 15px var(--display-glow);
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 20px var(--display-glow);
 }
 
-/* Custom Scrollbar for Display */
 .output-box::-webkit-scrollbar {
     height: 4px;
 }
@@ -198,7 +254,7 @@ h1 {
     border-radius: 4px;
 }
 
-/* Button Layout Grid */
+/* Button Part Grid */
 .but-part {
     display: flex;
     flex-direction: column;
@@ -212,52 +268,53 @@ h1 {
     gap: 0.8rem;
 }
 
-/* Universal Button Styling */
 button {
     flex: 1;
     height: 3.8rem;
     border-radius: 1rem;
-    border: 1px solid var(--card-border);
     font-size: 1.25rem;
     font-weight: 600;
     cursor: pointer;
     user-select: none;
     outline: none;
-    transition: transform 0.12s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.12s ease, background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 button:active {
     transform: scale(0.92);
 }
 
-/* Number Buttons */
+/* Numeric Buttons */
 .but {
     background-color: var(--btn-num-bg);
+    border: 1.5px solid var(--btn-num-border);
     color: var(--btn-num-text);
 }
 
 .but:hover {
     background-color: var(--btn-num-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Operator Buttons (+, -, x, /, %) */
+/* Operator Buttons */
 .but-sin {
     background-color: var(--btn-op-bg);
+    border: 1.5px solid var(--btn-op-border);
     color: var(--btn-op-text);
 }
 
 .but-sin:hover {
     background-color: var(--btn-op-hover);
     transform: translateY(-2px);
-    box-shadow: 0 0 12px var(--btn-op-bg);
+    box-shadow: 0 0 15px var(--btn-op-bg);
 }
 
-/* Special Action Buttons (CE, DEL, =) */
+/* Special Action Buttons */
 .but-s {
     background-color: var(--btn-special-bg);
+    border: 1.5px solid var(--btn-special-border);
     color: var(--btn-special-text);
     font-weight: 700;
 }
@@ -265,18 +322,17 @@ button:active {
 .but-s:hover {
     background-color: var(--btn-special-hover);
     transform: translateY(-2px);
-    box-shadow: 0 0 12px var(--btn-special-bg);
+    box-shadow: 0 0 15px var(--btn-special-bg);
 }
 
-/* Disabled Button State */
 button:disabled {
-    opacity: 0.4;
+    opacity: 0.35;
     cursor: not-allowed;
     transform: none !important;
     box-shadow: none !important;
 }
 
-/* Responsive Scaling */
+/* Responsive Styles */
 @media (max-width: 420px) {
     #Calculator-bady {
         padding: 1.2rem;
