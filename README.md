@@ -1,6 +1,6 @@
 # 🧮 Interactive Glassmorphism Web Calculator[cite: 8]
 
-A high-performance, modern web calculator engineered with a **Glassmorphism UI**, dynamic dark/light themes, ambient background glowing animations, and precise custom ES6 JavaScript arithmetic evaluation logic[cite: 8].
+A high-performance, ultra-modern web calculator featuring a high-contrast **Glassmorphism Panel**, continuous **Floating Mathematical Symbols Background Animation**, dynamic theme toggle, and a custom ES6 JavaScript parsing logic[cite: 8, 9].
 
 ---
 
@@ -14,29 +14,29 @@ A high-performance, modern web calculator engineered with a **Glassmorphism UI**
 
 ## 🚀 Key Features & UI Enhancements
 
-- **Frosted Glassmorphism Styling:** Translucent UI panel with real-time `backdrop-filter` background blurring[cite: 8].
-- **Dynamic Theme Switcher:** Smooth toggling between Dark and Light visual themes with adaptive emerald and cyan accent lighting.
-- **Micro-Animations & Feedback:** Tactile button scale responses on press, hover elevations, and pulsating ambient background lighting blobs.
-- **Digital LCD Monospace Display:** Enhanced digital display container using `'JetBrains Mono'` font with subtle text glowing effects.
-- **Robust Custom Calculator Logic:** Full arithmetic operation support handling addition, subtraction, multiplication, division, floats, backspace (`DEL`), and reset (`CE`)[cite: 8, 9].
+- **High-Contrast Dark/Light Glass Panel:** Prominent outer borders, glowing LCD displays, and elevated shadows to prevent background blending.
+- **Dynamic Floating Math Symbols Animation:** Real-time CSS keyframe animations drifting operators (`+`, `−`, `×`, `÷`, `%`, `√`, `π`, `=`) across the background.
+- **Dynamic Light/Dark Themes:** One-click instant color palette switching with glowing accent lighting.
+- **Micro-Interactions:** Tactile 3D button press responses, hover effects, and responsive layout adjustments.
+- **Core Engine:** Custom string parsing and step-by-step arithmetic handling without external libraries[cite: 9].
 
 ---
 
 ## 📂 Modular Architecture
 
-| File Name           | Responsibility                                                                                     |
-| :------------------ | :------------------------------------------------------------------------------------------------- |
-| 🌐 **`index.html`** | Structure layer with exact DOM selector anchors for the backend engine[cite: 7, 9].                |
-| 🎨 **`style.css`**  | Modern CSS Variables, Glassmorphism filters, theme palettes, and keyframe animations[cite: 8, 10]. |
-| 🧠 **`script.js`**  | Core custom evaluation engine handling calculations and input formatting[cite: 9].                 |
+| File Name           | Responsibility                                                                                   |
+| :------------------ | :----------------------------------------------------------------------------------------------- |
+| 🌐 **`index.html`** | Semantic structure, math background wrapper, and DOM anchor points[cite: 7, 9].                  |
+| 🎨 **`style.css`**  | High-contrast borders, CSS keyframes for floating symbols, and dark/light palettes[cite: 8, 10]. |
+| 🧠 **`script.js`**  | Pure custom math logic engine and output box state management[cite: 9].                          |
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **HTML5:** Semantic Structural Layout[cite: 8]
-- **CSS3:** Custom Variables, Flexbox Grid, Glassmorphism, Responsive Media Queries[cite: 8]
-- **JavaScript (ES6):** Custom Parsing & Arithmetic Logic Engine[cite: 8, 9]
+- **HTML5:** Layout and Floating Background Elements[cite: 8]
+- **CSS3:** Custom Variables, Backdrop Filters, Keyframe Animations, Flexbox[cite: 8]
+- **JavaScript (ES6):** Custom Mathematical Evaluator[cite: 8, 9]
 
 ---
 
